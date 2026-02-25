@@ -1,6 +1,6 @@
 function CheckDiscount ({totalAmount, discountrate, discountedTotal}) {   				
 	const handleClick = () => {
-		discountedTotal = totalAmount - (totalAmount * discountrate);
+		discountedTotal *= ((100 - discountrate) / 100);
 	};
 	return(
 		<><button onClick={handleClick}>Calc Final Total</button></>        
@@ -26,4 +26,5 @@ export default function App() {
 		</div>
 	);
 }
+
 
